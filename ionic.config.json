@@ -1,0 +1,7 @@
+{
+  "name": "adminFoto-cliente",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
