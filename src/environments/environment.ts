@@ -3,8 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://admigas_prod.test/api/',
+  //apiUrl: 'https://administradora.2gadmin.com.mx/api/'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

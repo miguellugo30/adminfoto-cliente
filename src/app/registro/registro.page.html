@@ -1,0 +1,101 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title id="title"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offset="1">
+        <ion-img
+          src="./../../../assets/Logo-1-2.png"
+          alt="logo-2g"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="4">
+        <br><br><br>
+        <h2>
+          Registro
+        </h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-item class="leyenda">
+          <ion-label>El número de Referencia lo puedes encontrar en tu recibo de gas de 2G Admin.</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <form [formGroup]="formLogin">
+            <ion-item>
+              <ion-input
+                label="Nombre"
+                labelPlacement="floating"
+                placeholder="Nombre"
+                aria-label="Dark input"
+                color="dark"
+                formControlName="nombre"
+                ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                label="Apellido Paterno"
+                labelPlacement="floating"
+                placeholder="Apellido Paterno"
+                aria-label="Dark input"
+                color="dark"
+                formControlName="apellido_pa"
+                ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                label="Apellido Materno"
+                labelPlacement="floating"
+                placeholder="Apellido Materno"
+                aria-label="Dark input"
+                color="dark"
+                formControlName="apellido_ma"
+                ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                label="Número de Referencia"
+                labelPlacement="floating"
+                placeholder="Número de Referencia"
+                formControlName="num_referencia"
+                ></ion-input>
+            </ion-item>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-button expand="block" (click)="registro()">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar >
+    <ion-title id="title">Derechos Reservados 2025</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+<ion-alert
+[isOpen]="isAlertOpen"
+header="Error"
+subHeader=""
+[message]='message'
+[buttons]="alertButtons"
+(didDismiss)="setOpen(false)"
+></ion-alert>

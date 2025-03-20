@@ -1,0 +1,43 @@
+ion-content {
+  --background: url(./../../assets/fondo3.webp) 0 0/100% 100% no-repeat;
+  --color: #FFFFFF;
+}
+ion-toolbar {
+  --background: transparent;
+
+  --min-height: 90px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --margin-top: 15px;
+}
+
+ion-img {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+ion-card {
+  box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+  margin-top: 55px;
+  text-align: center;
+}
+
+ion-label {
+  text-align: center;
+}
+
+ion-card-subtitle {
+  margin-bottom: 30px;
+}
+
+ion-button {
+  --background: #2e4060 !important;
+}
+
+.fecha {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+}
+

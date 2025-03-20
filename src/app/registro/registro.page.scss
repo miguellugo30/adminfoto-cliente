@@ -1,0 +1,31 @@
+ion-toolbar {
+  --background: transparent;
+  --color: white;
+
+  --min-height: 80px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-content {
+  --background: url(./../../assets/fondo3.webp) 0 0/100% 100% no-repeat;
+  --color: #000000;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+ion-grid ion-col {
+  --ion-grid-column-padding: 5px;
+}
+
+ion-list {
+  border-radius: 15px;;
+}
+
+.leyenda{
+  background-color: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+}

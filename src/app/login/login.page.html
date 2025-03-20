@@ -1,0 +1,78 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-title id="title"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offset="1">
+        <ion-img
+          src="./../../../assets/Logo-1-2.png"
+          alt="logo-2g"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="4">
+        <br><br><br>
+        <h2>
+          Bienvenido
+        </h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <form [formGroup]="formLogin">
+            <ion-item>
+              <ion-input
+                label="Correo Electrónico"
+                labelPlacement="floating"
+                placeholder="correo@correo.com"
+                aria-label="Dark input"
+                color="dark"
+                formControlName="email"
+                ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                type="password"
+                label="Contraseña"
+                labelPlacement="floating"
+                placeholder="*********"
+                formControlName="password"
+                ></ion-input>
+            </ion-item>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" >
+        <ion-button expand="block" (click)="login()">Iniciar Sesión</ion-button>
+      </ion-col>
+      <ion-col size="12" >
+        <ion-button expand="block" (click)="register()">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar >
+    <ion-title id="title">Derechos Reservados 2025</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+<ion-alert
+[isOpen]="isAlertOpen"
+header="Error"
+subHeader=""
+[message]='message'
+[buttons]="alertButtons"
+(didDismiss)="setOpen(false)"
+></ion-alert>
