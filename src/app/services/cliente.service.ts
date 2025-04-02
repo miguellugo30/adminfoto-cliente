@@ -2,6 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LocalStorageService } from './local-storage.service';
 import { environment } from 'src/environments/environment';
+import { responseCliente } from '../models/cliente';
+import { lastValueFrom } from 'rxjs';
+import { LoadServiceService } from './load-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,21 +13,11 @@ export class ClienteService {
 
   constructor(
     private http: HttpClient,
-        private localStorage: LocalStorageService,
+    private localStorage: LocalStorageService,
+    private loadService: LoadServiceService,
   ) { }
 
-  async get(userId: number ) {
-        return this.http.get(`${environment.apiUrl}cliente/` + userId).toPromise()
-          .then(async (res: any) => {
-            if (res.success) {
-
-              this.localStorage.setItem('cliente', JSON.stringify(res.data.cliente));
-              this.localStorage.setItem('recibo', JSON.stringify(res.data.recibo));
-              return res;
-
-            } else {
-              return res;
-            }
-        });
-      }
+  public  get(userId: number ) {
+    return this.http.get<responseCliente>(`${environment.apiUrl}cliente/` + userId);
+  }
 }
